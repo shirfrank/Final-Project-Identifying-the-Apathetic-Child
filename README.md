@@ -24,9 +24,10 @@ This project develops an **automated machine learning tool** to support clinical
 
 | Module | Description |
 | :--- | :--- |
-| **`Couple_Generator.py`** | Creates photo pairs (Neutral vs. Emotional for "Reactive"; Neutral vs. Neutral for "Apathetic"). |
-| **`Delta_Extraction.py`** | Extracts features via **OpenFace 2.0** and calculates the difference ($\Delta$) between post-stimulus and baseline features. |
-| **`vetting_pipeline.py`** | Reduces 714 raw features down to the top 20 using **ReliefF** and Spearman correlation ($|\rho| > 0.8$). |
+| **`Couple_Generator.py`** | Creates photo pairs (Neutral vs. Emotional for "Reactive"; Neutral vs. Neutral for "Apathetic").|
+| **`Delta_Extraction.py`** | Extracts features via **OpenFace 2.0** and calculates the difference ($\Delta$) between post-stimulus and baseline features.|
+| **`Features_Preprocessing.py`** | Aligns feature/label filenames, handles NaNs/Infs, and performs mean imputation or outlier removal.|
+| **`vetting_pipeline.py`** | Reduces raw features down to the top 20 using **ReliefF** and Spearman correlation ($\rho > 0.8$). |
 | **`Train_Evaluate.py`** | Implements and evaluates **Gradient Boosting**, **Random Forest**, and **SVM** models using cross-validation. |
 | **`main.py`** | The central entry point for running the end-to-end automated pipeline. |
 
